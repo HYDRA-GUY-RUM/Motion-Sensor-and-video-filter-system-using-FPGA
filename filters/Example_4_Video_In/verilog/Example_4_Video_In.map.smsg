@@ -1,0 +1,14 @@
+Warning (10037): Verilog HDL or VHDL warning at cpu.v(1440): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at cpu.v(1442): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at cpu.v(1592): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at cpu.v(2490): conditional expression evaluates to a constant
+Info (10281): Verilog HDL Declaration information at altera_up_video_clipper_counters.v(71): object "WIDTH" differs only in case from object "width" in the same scope
+Info (10281): Verilog HDL Declaration information at altera_up_video_clipper_counters.v(72): object "HEIGHT" differs only in case from object "height" in the same scope
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(95): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(104): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(113): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(239): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(248): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(257): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(266): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at video_system_clock_0.v(275): conditional expression evaluates to a constant

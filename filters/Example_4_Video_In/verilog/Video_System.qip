@@ -1,0 +1,33 @@
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_scaler/altera_up_avalon_video_scaler_hw.tcl
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_vga_controller/altera_up_avalon_video_vga_controller_hw.tcl
+set_global_assignment -name VERILOG_FILE VGA_Controller.v
+ set_global_assignment -name VERILOG_FILE Clock_Signals.v
+ set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_dual_clock_buffer/altera_up_avalon_video_dual_clock_buffer_hw.tcl
+set_global_assignment -name VERILOG_FILE Chroma_Resampler.v
+ set_global_assignment -name SDC_FILE CPU.sdc
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_csc/altera_up_avalon_video_csc_hw.tcl
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_decoder/altera_up_avalon_video_decoder_hw.tcl
+set_global_assignment -name VERILOG_FILE AV_Config.v
+ set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/altera_up_avalon_clocks/altera_up_avalon_clocks_hw.tcl
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_clipper/altera_up_avalon_video_clipper_hw.tcl
+set_global_assignment -name VERILOG_FILE Video_DMA.v
+ set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_rgb_resampler/altera_up_avalon_video_rgb_resampler_hw.tcl
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_pixel_buffer_dma/altera_up_avalon_video_pixel_buffer_dma_hw.tcl
+set_global_assignment -name VERILOG_FILE Dual_Clock_FIFO.v
+ set_global_assignment -name VERILOG_FILE Color_Space_Converter.v
+ set_global_assignment -name VERILOG_FILE Pixel_Buffer_DMA.v
+ set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Memory/altera_up_avalon_sram/altera_up_avalon_sram_hw.tcl
+set_global_assignment -name VERILOG_FILE Video_RGB_Resampler.v
+ set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_chroma_resampler/altera_up_avalon_video_chroma_resampler_hw.tcl
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/altera_up_avalon_audio_and_video_config/altera_up_avalon_audio_and_video_config_hw.tcl
+set_global_assignment -name VERILOG_FILE Video_Scaler.v
+ set_global_assignment -name VERILOG_FILE Pixel_Buffer.v
+ set_global_assignment -name SDC_FILE [file join $::quartus(ip_rootpath) altera/sopc_builder_ip/altera_avalon_clock_adapter/altera_avalon_clock_adapter.sdc]
+set_global_assignment -name TCL_FILE U:/University_Program_IP_Cores/Audio_Video/Video/altera_up_avalon_video_dma_controller/altera_up_avalon_video_dma_controller_hw.tcl
+set_global_assignment -name VERILOG_FILE Video_In_Decoder.v
+ set_global_assignment -name VERILOG_FILE Pixel_Scaler.v
+ set_global_assignment -name SOURCE_FILE CPU.ocp
+set_global_assignment -name VERILOG_FILE Video_Clipper.v
+ set_global_assignment -name VERILOG_FILE Pixel_RGB_Resampler.v
+ set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 005056C000080000012A8BB3DD4F 
+ 

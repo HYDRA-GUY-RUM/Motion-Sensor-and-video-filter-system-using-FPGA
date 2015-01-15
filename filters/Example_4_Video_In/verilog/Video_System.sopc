@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="Video_System">
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element AV_Config
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element CPU
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Chroma_Resampler
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element Clock_Signals
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Color_Space_Converter
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element Dual_Clock_FIFO
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Onchip_Memory
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Pixel_Buffer
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Pixel_Buffer_DMA
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element Pixel_RGB_Resampler
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Pixel_Scaler
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element VGA_Controller
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element Video_Clipper
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element Video_DMA
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element Video_In_Decoder
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element Video_RGB_Resampler
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element Video_Scaler
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element Video_System
+   {
+   }
+   element AV_Config.avalon_av_config_slave
+   {
+      datum baseAddress
+      {
+         value = "561152";
+         type = "long";
+      }
+   }
+   element Clock_Signals.avalon_clocks_slave
+   {
+      datum baseAddress
+      {
+         value = "561200";
+         type = "long";
+      }
+   }
+   element Pixel_Buffer_DMA.avalon_control_slave
+   {
+      datum baseAddress
+      {
+         value = "561184";
+         type = "long";
+      }
+   }
+   element Video_DMA.avalon_dma_control_slave
+   {
+      datum baseAddress
+      {
+         value = "561168";
+         type = "long";
+      }
+   }
+   element Pixel_Buffer.avalon_sram_slave
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "long";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element CPU.jtag_debug_module
+   {
+      datum baseAddress
+      {
+         value = "559104";
+         type = "long";
+      }
+   }
+   element Onchip_Memory.s1
+   {
+      datum baseAddress
+      {
+         value = "540672";
+         type = "long";
+      }
+   }
+   element Clock_Signals.sys_clk
+   {
+      datum _clockDomain
+      {
+         value = "sys_clk";
+         type = "String";
+      }
+   }
+   element Clock_Signals.vga_clk
+   {
+      datum _clockDomain
+      {
+         value = "vga_clk";
+         type = "String";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="deviceFamily" value="CYCLONEII" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="hardcopyCompatible" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="projectName" value="Example_4_Video_In.qpf" />
+ <parameter name="systemHash" value="51561132453" />
+ <parameter name="timeStamp" value="1282244071628" />
+ <module name="clk_0" kind="clock_source" version="9.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+ </module>
+ <module name="CPU" kind="altera_nios2" version="9.1" enabled="1">
+  <parameter name="userDefinedSettings" value="" />
+  <parameter name="setting_showUnpublishedSettings" value="false" />
+  <parameter name="setting_showInternalSettings" value="false" />
+  <parameter name="setting_shadowRegisterSets" value="0" />
+  <parameter name="setting_preciseSlaveAccessErrorException" value="false" />
+  <parameter name="setting_preciseIllegalMemAccessException" value="false" />
+  <parameter name="setting_preciseDivisionErrorException" value="false" />
+  <parameter name="setting_performanceCounter" value="false" />
+  <parameter name="setting_perfCounterWidth" value="_32" />
+  <parameter name="setting_interruptControllerType" value="Internal" />
+  <parameter name="setting_illegalMemAccessDetection" value="false" />
+  <parameter name="setting_illegalInstructionsTrap" value="false" />
+  <parameter name="setting_fullWaveformSignals" value="false" />
+  <parameter name="setting_extraExceptionInfo" value="false" />
+  <parameter name="setting_exportPCB" value="false" />
+  <parameter name="setting_debugSimGen" value="false" />
+  <parameter name="setting_clearXBitsLDNonBypass" value="true" />
+  <parameter name="setting_branchPredictionType" value="Automatic" />
+  <parameter name="setting_bit31BypassDCache" value="true" />
+  <parameter name="setting_bigEndian" value="false" />
+  <parameter name="setting_bhtPtrSz" value="_8" />
+  <parameter name="setting_bhtIndexPcOnly" value="false" />
+  <parameter name="setting_avalonDebugPortPresent" value="false" />
+  <parameter name="setting_alwaysEncrypt" value="true" />
+  <parameter name="setting_allowFullAddressRange" value="false" />
+  <parameter name="setting_activateTrace" value="true" />
+  <parameter name="setting_activateTestEndChecker" value="false" />
+  <parameter name="setting_activateMonitors" value="true" />
+  <parameter name="setting_activateModelChecker" value="false" />
+  <parameter name="setting_HDLSimCachesCleared" value="true" />
+  <parameter name="setting_HBreakTest" value="false" />
+  <parameter name="resetSlave" value="Onchip_Memory.s1" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="muldiv_multiplierType" value="EmbeddedMulFast" />
+  <parameter name="muldiv_divider" value="false" />
+  <parameter name="mpu_useLimit" value="false" />
+  <parameter name="mpu_numOfInstRegion" value="8" />
+  <parameter name="mpu_numOfDataRegion" value="8" />
+  <parameter name="mpu_minInstRegionSize" value="_12" />
+  <parameter name="mpu_minDataRegionSize" value="_12" />
+  <parameter name="mpu_enabled" value="false" />
+  <parameter name="mmu_uitlbNumEntries" value="_4" />
+  <parameter name="mmu_udtlbNumEntries" value="_6" />
+  <parameter name="mmu_tlbPtrSz" value="_7" />
+  <parameter name="mmu_tlbNumWays" value="_16" />
+  <parameter name="mmu_processIDNumBits" value="_8" />
+  <parameter name="mmu_enabled" value="false" />
+  <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
+  <parameter name="mmu_TLBMissExcSlave" value="" />
+  <parameter name="mmu_TLBMissExcOffset" value="0" />
+  <parameter name="manuallyAssignCpuID" value="false" />
+  <parameter name="impl" value="Tiny" />
+  <parameter name="icache_size" value="_4096" />
+  <parameter name="icache_ramBlockType" value="Automatic" />
+  <parameter name="icache_numTCIM" value="_0" />
+  <parameter name="icache_burstType" value="None" />
+  <parameter name="exceptionSlave" value="Onchip_Memory.s1" />
+  <parameter name="exceptionOffset" value="32" />
+  <parameter name="debug_triggerArming" value="true" />
+  <parameter name="debug_level" value="Level1" />
+  <parameter name="debug_jtagInstanceID" value="0" />
+  <parameter name="debug_embeddedPLL" value="true" />
+  <parameter name="debug_debugReqSignals" value="false" />
+  <parameter name="debug_assignJtagInstanceID" value="false" />
+  <parameter name="debug_OCIOnchipTrace" value="_128" />
+  <parameter name="dcache_size" value="_2048" />
+  <parameter name="dcache_ramBlockType" value="Automatic" />
+  <parameter name="dcache_omitDataMaster" value="false" />
+  <parameter name="dcache_numTCDM" value="_0" />
+  <parameter name="dcache_lineSize" value="_32" />
+  <parameter name="dcache_bursts" value="false" />
+  <parameter name="cpuReset" value="false" />
+  <parameter name="cpuID" value="0" />
+  <parameter name="breakSlave">CPU.jtag_debug_module</parameter>
+  <parameter name="breakOffset" value="32" />
+ </module>
+ <module
+   name="Onchip_Memory"
+   kind="altera_avalon_onchip_memory2"
+   version="9.1"
+   enabled="1">
+  <parameter name="allowInSystemMemoryContentEditor" value="false" />
+  <parameter name="blockType" value="AUTO" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="dualPort" value="false" />
+  <parameter name="initMemContent" value="true" />
+  <parameter name="initializationFileName" value="Onchip_Memory" />
+  <parameter name="instanceID" value="NONE" />
+  <parameter name="memorySize" value="16384" />
+  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter name="simAllowMRAMContentsFile" value="false" />
+  <parameter name="slave1Latency" value="1" />
+  <parameter name="slave2Latency" value="1" />
+  <parameter name="useNonDefaultInitFile" value="false" />
+  <parameter name="useShallowMemBlocks" value="false" />
+  <parameter name="writable" value="true" />
+ </module>
+ <module
+   name="Dual_Clock_FIFO"
+   kind="altera_up_avalon_video_dual_clock_buffer"
+   version="9.1"
+   enabled="1">
+  <parameter name="color_bits" value="10" />
+  <parameter name="color_planes" value="3" />
+ </module>
+ <module
+   name="Clock_Signals"
+   kind="altera_up_avalon_clocks"
+   version="9.2"
+   enabled="1">
+  <parameter name="board" value="DE2" />
+  <parameter name="sys_clk_freq" value="50" />
+  <parameter name="sdram_clk" value="false" />
+  <parameter name="vga_clk" value="true" />
+  <parameter name="audio_clk" value="false" />
+  <parameter name="audio_clk_freq" value="12.288" />
+ </module>
+ <module
+   name="Pixel_Buffer"
+   kind="altera_up_avalon_sram"
+   version="9.1"
+   enabled="1">
+  <parameter name="board" value="DE2" />
+  <parameter name="pixel_buffer" value="true" />
+ </module>
+ <module
+   name="Pixel_Buffer_DMA"
+   kind="altera_up_avalon_video_pixel_buffer_dma"
+   version="9.1"
+   enabled="1">
+  <parameter name="addr_mode" value="X-Y" />
+  <parameter name="start_address" value="0" />
+  <parameter name="back_start_address" value="0" />
+  <parameter name="image_width" value="320" />
+  <parameter name="image_height" value="240" />
+  <parameter name="color_space" value="16-bit RGB" />
+ </module>
+ <module
+   name="Pixel_RGB_Resampler"
+   kind="altera_up_avalon_video_rgb_resampler"
+   version="9.1"
+   enabled="1">
+  <parameter name="input_type" value="16-bit RGB" />
+  <parameter name="output_type" value="30-bit RGB" />
+  <parameter name="alpha" value="255" />
+ </module>
+ <module
+   name="Pixel_Scaler"
+   kind="altera_up_avalon_video_scaler"
+   version="9.1"
+   enabled="1">
+  <parameter name="width_scaling" value="2" />
+  <parameter name="height_scaling" value="2" />
+  <parameter name="width_in" value="320" />
+  <parameter name="height_in" value="240" />
+  <parameter name="color_bits" value="10" />
+  <parameter name="color_planes" value="3" />
+ </module>
+ <module
+   name="VGA_Controller"
+   kind="altera_up_avalon_video_vga_controller"
+   version="9.1"
+   enabled="1">
+  <parameter name="board" value="DE2" />
+  <parameter name="device" value="VGA Connector" />
+  <parameter name="underflow_flag" value="false" />
+ </module>
+ <module
+   name="Video_In_Decoder"
+   kind="altera_up_avalon_video_decoder"
+   version="9.1"
+   enabled="1">
+  <parameter name="video_source">On-board Video In (NTSC or PAL)</parameter>
+ </module>
+ <module
+   name="Chroma_Resampler"
+   kind="altera_up_avalon_video_chroma_resampler"
+   version="9.1"
+   enabled="1">
+  <parameter name="input_type" value="YCrCb 422" />
+  <parameter name="output_type" value="YCrCb 444" />
+ </module>
+ <module
+   name="Color_Space_Converter"
+   kind="altera_up_avalon_video_csc"
+   version="9.1"
+   enabled="1">
+  <parameter name="csc_type">444 YCrCb to 24-bit RGB</parameter>
+ </module>
+ <module
+   name="Video_RGB_Resampler"
+   kind="altera_up_avalon_video_rgb_resampler"
+   version="9.1"
+   enabled="1">
+  <parameter name="input_type" value="24-bit RGB" />
+  <parameter name="output_type" value="16-bit RGB" />
+  <parameter name="alpha" value="255" />
+ </module>
+ <module
+   name="Video_Clipper"
+   kind="altera_up_avalon_video_clipper"
+   version="9.1"
+   enabled="1">
+  <parameter name="width_in" value="720" />
+  <parameter name="height_in" value="244" />
+  <parameter name="drop_left" value="40" />
+  <parameter name="drop_right" value="40" />
+  <parameter name="drop_top" value="2" />
+  <parameter name="drop_bottom" value="2" />
+  <parameter name="add_left" value="0" />
+  <parameter name="add_right" value="0" />
+  <parameter name="add_top" value="0" />
+  <parameter name="add_bottom" value="0" />
+  <parameter name="add_value_plane_1" value="0" />
+  <parameter name="add_value_plane_2" value="0" />
+  <parameter name="add_value_plane_3" value="0" />
+  <parameter name="add_value_plane_4" value="0" />
+  <parameter name="color_bits" value="16" />
+  <parameter name="color_planes" value="1" />
+ </module>
+ <module
+   name="Video_Scaler"
+   kind="altera_up_avalon_video_scaler"
+   version="9.1"
+   enabled="1">
+  <parameter name="width_scaling" value="0.5" />
+  <parameter name="height_scaling" value="1" />
+  <parameter name="width_in" value="640" />
+  <parameter name="height_in" value="240" />
+  <parameter name="color_bits" value="16" />
+  <parameter name="color_planes" value="1" />
+ </module>
+ <module
+   name="Video_DMA"
+   kind="altera_up_avalon_video_dma_controller"
+   version="9.1"
+   enabled="1">
+  <parameter name="mode">From Stream to Memory</parameter>
+  <parameter name="addr_mode" value="X-Y" />
+  <parameter name="start_address" value="0" />
+  <parameter name="back_start_address" value="0" />
+  <parameter name="width" value="320" />
+  <parameter name="height" value="240" />
+  <parameter name="color_bits" value="16" />
+  <parameter name="color_planes" value="1" />
+ </module>
+ <module
+   name="AV_Config"
+   kind="altera_up_avalon_audio_and_video_config"
+   version="9.1"
+   enabled="1">
+  <parameter name="device">On-Board Peripherals</parameter>
+  <parameter name="board" value="DE2" />
+  <parameter name="eai" value="true" />
+  <parameter name="audio_in" value="Microphone to ADC" />
+  <parameter name="dac_enable" value="true" />
+  <parameter name="mic_bypass" value="false" />
+  <parameter name="line_in_bypass" value="false" />
+  <parameter name="mic_attenuation" value="-6dB" />
+  <parameter name="data_format" value="Left Justified" />
+  <parameter name="bit_length" value="24" />
+  <parameter name="sampling_rate" value="48 kHz" />
+  <parameter name="video_format" value="NTSC" />
+ </module>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.instruction_master"
+   end="CPU.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00088800" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="CPU.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00088800" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.instruction_master"
+   end="Onchip_Memory.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00084000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="Onchip_Memory.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00084000" />
+ </connection>
+ <connection
+   kind="clock"
+   version="9.1"
+   start="clk_0.clk"
+   end="Clock_Signals.clk_in_primary" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="Clock_Signals.avalon_clocks_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00089030" />
+ </connection>
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="CPU.clk" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Onchip_Memory.clk1" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Dual_Clock_FIFO.clock_stream_in" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.vga_clk"
+   end="Dual_Clock_FIFO.clock_stream_out" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="Pixel_Buffer.avalon_sram_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Pixel_Scaler.avalon_scaler_source"
+   end="Dual_Clock_FIFO.avalon_dc_buffer_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Pixel_RGB_Resampler.avalon_rgb_source"
+   end="Pixel_Scaler.avalon_scaler_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Pixel_Buffer_DMA.avalon_pixel_source"
+   end="Pixel_RGB_Resampler.avalon_rgb_sink" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="Pixel_Buffer_DMA.avalon_pixel_dma_master"
+   end="Pixel_Buffer.avalon_sram_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Pixel_Buffer.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Pixel_Buffer_DMA.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Pixel_RGB_Resampler.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Pixel_Scaler.clock_reset" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Dual_Clock_FIFO.avalon_dc_buffer_source"
+   end="VGA_Controller.avalon_vga_sink" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.vga_clk"
+   end="VGA_Controller.clock_reset" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Video_In_Decoder.avalon_decoder_source"
+   end="Chroma_Resampler.avalon_chroma_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Chroma_Resampler.avalon_chroma_source"
+   end="Color_Space_Converter.avalon_csc_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Color_Space_Converter.avalon_csc_source"
+   end="Video_RGB_Resampler.avalon_rgb_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Video_RGB_Resampler.avalon_rgb_source"
+   end="Video_Clipper.avalon_clipper_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Video_Clipper.avalon_clipper_source"
+   end="Video_Scaler.avalon_scaler_sink" />
+ <connection
+   kind="avalon_streaming"
+   version="9.1"
+   start="Video_Scaler.avalon_scaler_source"
+   end="Video_DMA.avalon_dma_sink" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="Video_DMA.avalon_dma_master"
+   end="Pixel_Buffer.avalon_sram_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Video_DMA.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Video_Scaler.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Video_Clipper.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Video_RGB_Resampler.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Color_Space_Converter.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Chroma_Resampler.clock_reset" />
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="Video_In_Decoder.clock_reset" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="AV_Config.avalon_av_config_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00089000" />
+ </connection>
+ <connection
+   kind="clock"
+   version="9.1"
+   start="Clock_Signals.sys_clk"
+   end="AV_Config.clock_reset" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="Video_DMA.avalon_dma_control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00089010" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="CPU.data_master"
+   end="Pixel_Buffer_DMA.avalon_control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00089020" />
+ </connection>
+</system>

@@ -1,0 +1,70 @@
+|Color_Detector_FSM
+clk => k.CLK
+clk => d.CLK
+clk => c.CLK
+clk => b.CLK
+clk => a.CLK
+data[0] => LessThan0.IN20
+data[1] => LessThan0.IN19
+data[2] => LessThan0.IN18
+data[3] => LessThan0.IN17
+data[4] => LessThan0.IN16
+data[5] => LessThan0.IN15
+data[6] => LessThan0.IN14
+data[7] => LessThan0.IN13
+data[8] => LessThan0.IN12
+data[9] => LessThan0.IN11
+data[10] => LessThan1.IN20
+data[11] => LessThan1.IN19
+data[12] => LessThan1.IN18
+data[13] => LessThan1.IN17
+data[14] => LessThan1.IN16
+data[15] => LessThan1.IN15
+data[16] => LessThan1.IN14
+data[17] => LessThan1.IN13
+data[18] => LessThan1.IN12
+data[19] => LessThan1.IN11
+data[20] => LessThan2.IN20
+data[21] => LessThan2.IN19
+data[22] => LessThan2.IN18
+data[23] => LessThan2.IN17
+data[24] => LessThan2.IN16
+data[25] => LessThan2.IN15
+data[26] => LessThan2.IN14
+data[27] => LessThan2.IN13
+data[28] => LessThan2.IN12
+data[29] => LessThan2.IN11
+startofpacket => k1.IN0
+endofpacket => k1.IN1
+endofpacket => comb.IN1
+endofpacket => comb.IN1
+
+
+|Color_Detector_FSM|algorithmtester:U1
+a => LessThan2.IN2
+a => always0.IN0
+a => always0.IN1
+b => LessThan0.IN2
+b => always0.IN1
+b => always0.IN1
+c => LessThan1.IN2
+c => always0.IN1
+c => always0.IN1
+c => always0.IN1
+c => always0.IN1
+d => LessThan3.IN2
+d => always0.IN1
+d => always0.IN1
+d => always0.IN1
+d => always0.IN1
+d => always0.IN1
+k => LEDR[0]$latch.LATCH_ENABLE
+k => LEDR[1]$latch.LATCH_ENABLE
+k => LEDR[2]$latch.LATCH_ENABLE
+k => LEDR[3]$latch.LATCH_ENABLE
+k => LEDR[4]$latch.LATCH_ENABLE
+k => LEDR[5]$latch.LATCH_ENABLE
+k => LEDR[6]$latch.LATCH_ENABLE
+k => LEDR[7]$latch.LATCH_ENABLE
+
+

@@ -1,0 +1,802 @@
+Analysis & Synthesis report for Color_Detector_FSM
+Mon Nov 24 22:07:25 2014
+Quartus II 32-bit Version 11.1 Build 173 11/01/2011 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 24 22:07:25 2014    ;
+; Quartus II 32-bit Version          ; 11.1 Build 173 11/01/2011 SJ Web Edition ;
+; Revision Name                      ; Color_Detector_FSM                       ;
+; Top-level Entity Name              ; Color_Detector_FSM                       ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 13                                       ;
+;     Total combinational functions  ; 13                                       ;
+;     Dedicated logic registers      ; 2                                        ;
+; Total registers                    ; 2                                        ;
+; Total pins                         ; 45                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Color_Detector_FSM ; Color_Detector_FSM ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                        ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+
+; Color_Detector_FSM.v             ; yes             ; User Verilog HDL File  ; C:/Users/Sarang/Desktop/ECE241 project/project/Color_Detector_FSM.v ;
+; algorithmtester.v                ; yes             ; User Verilog HDL File  ; C:/Users/Sarang/Desktop/ECE241 project/project/algorithmtester.v    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 13    ;
+;                                             ;       ;
+; Total combinational functions               ; 13    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 11    ;
+;     -- 3 input functions                    ; 2     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 13    ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 2     ;
+;     -- Dedicated logic registers            ; 2     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 45    ;
+; Maximum fan-out node                        ; k1    ;
+; Maximum fan-out                             ; 3     ;
+; Total fan-out                               ; 55    ;
+; Average fan-out                             ; 0.92  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+; |Color_Detector_FSM        ; 13 (12)           ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |Color_Detector_FSM                    ;              ;
+;    |algorithmtester:U1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Color_Detector_FSM|algorithmtester:U1 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; algorithmtester:U1|LEDR[5]                         ; k                   ; yes                    ;
+; k1                                                 ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; a                                     ; Stuck at GND due to stuck port data_in ;
+; d                                     ; Stuck at GND due to stuck port data_in ;
+; c                                     ; Merged with b                          ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 11.1 Build 173 11/01/2011 SJ Web Edition
+    Info: Processing started: Mon Nov 24 22:07:19 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Color_Detector_FSM -c Color_Detector_FSM
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file color_detector_fsm.v
+    Info (12023): Found entity 1: Color_Detector_FSM
+Info (12021): Found 1 design units, including 1 entities, in source file algorithmtester.v
+    Info (12023): Found entity 1: algorithmtester
+Info (12127): Elaborating entity "Color_Detector_FSM" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at Color_Detector_FSM.v(12): inferring latch(es) for variable "z1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Color_Detector_FSM.v(12): inferring latch(es) for variable "a1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Color_Detector_FSM.v(12): inferring latch(es) for variable "b1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Color_Detector_FSM.v(12): inferring latch(es) for variable "c1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Color_Detector_FSM.v(12): inferring latch(es) for variable "d1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Color_Detector_FSM.v(12): inferring latch(es) for variable "k1", which holds its previous value in one or more paths through the always construct
+Warning (10230): Verilog HDL assignment warning at Color_Detector_FSM.v(530): truncated value with size 32 to match size of target (1)
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(532): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(533): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(534): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(535): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(536): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(537): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(538): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(539): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(540): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(541): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(542): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(543): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(544): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(545): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(546): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(547): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(548): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(549): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(550): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(551): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(552): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(553): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(554): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(555): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(556): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(557): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(558): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(559): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(560): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(561): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(562): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(563): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(564): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(565): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(566): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(567): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(568): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(569): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(570): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(571): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(572): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(573): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(574): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(575): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(576): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(577): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(578): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(579): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(580): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(581): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(582): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(583): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(584): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(585): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(586): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(587): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(588): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(589): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(590): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(591): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(592): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(593): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(594): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(595): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(596): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(597): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(598): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(599): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(600): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(601): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(602): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(603): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(604): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(605): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(606): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(607): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(608): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(609): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(610): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(611): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(612): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(613): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(614): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(615): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(616): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(617): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(618): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(619): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(620): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(621): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(622): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(623): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(624): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(625): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(626): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(627): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(628): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(629): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(630): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(631): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(632): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(633): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(634): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(635): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(636): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(637): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(638): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(639): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(640): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(641): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(642): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(643): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(644): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(645): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(646): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(647): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(648): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(649): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(650): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(651): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(652): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(653): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(654): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(655): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(656): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(657): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(658): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(659): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(660): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(661): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(662): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(663): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(664): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(665): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(666): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(667): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(668): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(669): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(670): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(671): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(672): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(673): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(674): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(675): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(676): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(677): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(678): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(679): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(680): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(681): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(682): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(683): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(684): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(685): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(686): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(687): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(688): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(689): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(690): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(691): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(692): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(693): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(694): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(695): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(696): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(697): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(698): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(699): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(700): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(701): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(702): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(703): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(704): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(705): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(706): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(707): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(708): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(709): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(710): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(711): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(712): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(713): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(714): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(715): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(716): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(717): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(718): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(719): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(720): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(721): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(722): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(723): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(724): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(725): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(726): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(727): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(728): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(729): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(730): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(731): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(732): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(733): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(734): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(735): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(736): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(737): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(738): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(739): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(740): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(741): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(742): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(743): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(744): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(745): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(746): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(747): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(748): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(749): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(750): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(751): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(752): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(753): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(754): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(755): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(756): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(757): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(758): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(759): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(760): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(761): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(762): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(763): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(764): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(765): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(766): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(767): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(768): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(769): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(770): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(771): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(772): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(773): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(774): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(775): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(776): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(777): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(778): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(779): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(780): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(781): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(782): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(783): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(784): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(785): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(786): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(787): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(788): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(789): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(790): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(791): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(792): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(793): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(794): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(795): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(796): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(797): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(798): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(799): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(800): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(801): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(802): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(803): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(804): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(805): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(806): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(807): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(808): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(809): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(810): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(811): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(812): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(813): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(814): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(815): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(816): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(817): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(818): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(819): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(820): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(821): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(822): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(823): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(824): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(825): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(826): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(827): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(828): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(829): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(830): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(831): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(832): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(833): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(834): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(835): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(836): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(837): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(838): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(839): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(840): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(841): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(842): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(843): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(844): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(845): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(846): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(847): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(848): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(849): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(850): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(851): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(852): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(853): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(854): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(855): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(856): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(857): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(858): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(859): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(860): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(861): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(862): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(863): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(864): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(865): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(866): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(867): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(868): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(869): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(870): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(871): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(872): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(873): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(874): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(875): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(876): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(877): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(878): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(879): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(880): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(881): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(882): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(883): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(884): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(885): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(886): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(887): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(888): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(889): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(890): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(891): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(892): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(893): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(894): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(895): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(896): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(897): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(898): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(899): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(900): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(901): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(902): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(903): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(904): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(905): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(906): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(907): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(908): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(909): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(910): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(911): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(912): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(913): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(914): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(915): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(916): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(917): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(918): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(919): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(920): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(921): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(922): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(923): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(924): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(925): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(926): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(927): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(928): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(929): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(930): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(931): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(932): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(933): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(934): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(935): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(936): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(937): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(938): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(939): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(940): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(941): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(942): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(943): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(944): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(945): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(946): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(947): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(948): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(949): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(950): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(951): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(952): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(953): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(954): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(955): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(956): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(957): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(958): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(959): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(960): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(961): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(962): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(963): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(964): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(965): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(966): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(967): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(968): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(969): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(970): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(971): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(972): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(973): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(974): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(975): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(976): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(977): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(978): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(979): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(980): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(981): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(982): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(983): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(984): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(985): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(986): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(987): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(988): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(989): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(990): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(991): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(992): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(993): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(994): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(995): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(996): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(997): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(998): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(999): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1000): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1001): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1002): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1003): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1004): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1005): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1006): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1007): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1008): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1009): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1010): constant value overflow
+Warning (10259): Verilog HDL error at Color_Detector_FSM.v(1011): constant value overflow
+Warning (10230): Verilog HDL assignment warning at Color_Detector_FSM.v(1014): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Color_Detector_FSM.v(1022): truncated value with size 32 to match size of target (1)
+Warning (10034): Output port "right" at Color_Detector_FSM.v(5) has no driver
+Warning (10034): Output port "up" at Color_Detector_FSM.v(5) has no driver
+Warning (10034): Output port "left" at Color_Detector_FSM.v(5) has no driver
+Warning (10034): Output port "down" at Color_Detector_FSM.v(5) has no driver
+Info (10041): Inferred latch for "k1" at Color_Detector_FSM.v(22)
+Info (10041): Inferred latch for "d1" at Color_Detector_FSM.v(12)
+Info (10041): Inferred latch for "c1" at Color_Detector_FSM.v(12)
+Info (10041): Inferred latch for "b1" at Color_Detector_FSM.v(12)
+Info (10041): Inferred latch for "a1" at Color_Detector_FSM.v(12)
+Info (10041): Inferred latch for "z1" at Color_Detector_FSM.v(12)
+Info (12128): Elaborating entity "algorithmtester" for hierarchy "algorithmtester:U1"
+Warning (10240): Verilog HDL Always Construct warning at algorithmtester.v(7): inferring latch(es) for variable "LEDR", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "LEDR[0]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[1]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[2]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[3]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[4]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[5]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[6]" at algorithmtester.v(7)
+Info (10041): Inferred latch for "LEDR[7]" at algorithmtester.v(7)
+Info (13005): Duplicate registers merged to single register
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "right" is stuck at GND
+    Warning (13410): Pin "up" is stuck at GND
+    Warning (13410): Pin "left" is stuck at GND
+    Warning (13410): Pin "down" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 14 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 507 warnings
+    Info: Peak virtual memory: 298 megabytes
+    Info: Processing ended: Mon Nov 24 22:07:25 2014
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
+
+

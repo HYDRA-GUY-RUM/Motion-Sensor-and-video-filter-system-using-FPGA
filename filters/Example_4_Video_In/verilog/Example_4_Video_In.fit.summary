@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Nov 27 15:36:30 2014
+Quartus II 32-bit Version : 11.1 Build 173 11/01/2011 SJ Web Edition
+Revision Name : Example_4_Video_In
+Top-level Entity Name : Example_4_Video_In
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 3,410 / 33,216 ( 10 % )
+    Total combinational functions : 3,193 / 33,216 ( 10 % )
+    Dedicated logic registers : 1,966 / 33,216 ( 6 % )
+Total registers : 2062
+Total pins : 94 / 475 ( 20 % )
+Total virtual pins : 0
+Total memory bits : 164,608 / 483,840 ( 34 % )
+Embedded Multiplier 9-bit elements : 10 / 70 ( 14 % )
+Total PLLs : 1 / 4 ( 25 % )

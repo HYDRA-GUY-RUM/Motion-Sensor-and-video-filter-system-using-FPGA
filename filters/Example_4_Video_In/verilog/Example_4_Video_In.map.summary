@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Nov 27 15:35:57 2014
+Quartus II 32-bit Version : 11.1 Build 173 11/01/2011 SJ Web Edition
+Revision Name : Example_4_Video_In
+Top-level Entity Name : Example_4_Video_In
+Family : Cyclone II
+Total logic elements : 3,497
+    Total combinational functions : 3,148
+    Dedicated logic registers : 2,087
+Total registers : 2087
+Total pins : 94
+Total virtual pins : 0
+Total memory bits : 164,608
+Embedded Multiplier 9-bit elements : 10
+Total PLLs : 1

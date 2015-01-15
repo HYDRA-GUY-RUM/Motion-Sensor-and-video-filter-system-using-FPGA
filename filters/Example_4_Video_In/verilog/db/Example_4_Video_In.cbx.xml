@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Example_4_Video_In">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|CPU:the_CPU|CPU_nios2_oci:the_CPU_nios2_oci|CPU_nios2_oci_im:the_CPU_nios2_oci_im|CPU_traceram_lpm_dram_bdp_component_module:CPU_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|CPU:the_CPU|CPU_nios2_oci:the_CPU_nios2_oci|CPU_nios2_ocimem:the_CPU_nios2_ocimem|CPU_ociram_lpm_dram_bdp_component_module:CPU_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_t072.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|CPU:the_CPU|CPU_rf_module:CPU_rf|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_ig22.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Color_Space_Converter:the_Color_Space_Converter|altera_up_YCrCb_to_RGB_converter:YCrCb_to_RGB|lpm_mult:lpm_mult_component_3" CBX_FILE_NAME="mult_rpq.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Color_Space_Converter:the_Color_Space_Converter|altera_up_YCrCb_to_RGB_converter:YCrCb_to_RGB|lpm_mult:lpm_mult_component_0" CBX_FILE_NAME="mult_rpq.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Color_Space_Converter:the_Color_Space_Converter|altera_up_YCrCb_to_RGB_converter:YCrCb_to_RGB|lpm_mult:lpm_mult_component_4" CBX_FILE_NAME="mult_rpq.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Onchip_Memory:the_Onchip_Memory|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_8ub1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Pixel_Buffer_DMA:the_Pixel_Buffer_DMA|scfifo:Image_Buffer" CBX_FILE_NAME="scfifo_70a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Color_Space_Converter:the_Color_Space_Converter|altera_up_YCrCb_to_RGB_converter:YCrCb_to_RGB|lpm_mult:lpm_mult_component_1" CBX_FILE_NAME="mult_rpq.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Color_Space_Converter:the_Color_Space_Converter|altera_up_YCrCb_to_RGB_converter:YCrCb_to_RGB|lpm_mult:lpm_mult_component_2" CBX_FILE_NAME="mult_rpq.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Dual_Clock_FIFO:the_Dual_Clock_FIFO|dcfifo:Data_FIFO" CBX_FILE_NAME="dcfifo_hpj1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Pixel_Scaler:the_Pixel_Scaler|altera_up_video_scaler_multiply_height:Multiply_Height|scfifo:Multiply_Height_FIFO" CBX_FILE_NAME="scfifo_qd31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Example_4_Video_In|Video_System:Char_Buffer_System|Video_In_Decoder:the_Video_In_Decoder|altera_up_video_dual_clock_fifo:Video_In_Dual_Clock_FIFO|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_h2l1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
